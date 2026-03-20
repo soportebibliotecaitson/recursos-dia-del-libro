@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/libro.png">
+    <title>Día Mundial del Libro y los Derechos de Autor ITSON 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+
+@media (max-width: 480px) {
+    .event-card.active .event-content {
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        transition: none !important;
+    }
+}
+
+.CarruselDeLasAmericas {
+    margin-top: 0;
+}
+
+        :root {
+            --primary: #2a2736;
+            --secondary: #f04e66;
+            --accent: #f97316;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        /* Encabezado (antes .header) */
+        .encabezado {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            /* Eliminamos la posición fixed para que se mantenga en el flujo normal */
+            /* position: fixed; top: 0; left: 0; right: 0; */
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        /* La clase scrolled se conserva si se requiere algún cambio en el scroll */
+        .encabezado.scrolled {
+            padding: 0.5rem 1rem;
+           color: white;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            height: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .encabezado.scrolled .logo {
+            height: 40px;
+        }
+
+        .header-title {
+            flex-grow: 1;
+             color: white;
+        }
+
+        .header-title h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 700;
+            transition: all 0.3s ease;
+             color: white;
+        }
+
+        .header-title p {
+            font-size: 0.9rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .encabezado.scrolled .header-title h1 {
+            font-size: 1.2rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 250px;
+        }
+
+        /* Main Content */
+        .main-contenidO {
+            padding: 1rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CarruselDeLasAmericas */
+        .CarruselDeLasAmericas-container {
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 300px;
+        }
+
+        .CarruselDeLasAmericas {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .CarruselDeLasAmericas-slide {
+            min-width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+        .CarruselDeLasAmericas-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .CarruselDeLasAmericas-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .CarruselDeLasAmericas-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .CarruselDeLasAmericas-nav {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .CarruselDeLasAmericas-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .CarruselDeLasAmericas-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        .CarruselDeLasAmericas-prev, .CarruselDeLasAmericas-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .CarruselDeLasAmericas-prev {
+            left: 1rem;
+        }
+
+        .CarruselDeLasAmericas-next {
+            right: 1rem;
+        }
+
+        .CarruselDeLasAmericas-prev:hover, .CarruselDeLasAmericas-next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Countdown */
+        .countdown-section {
+            margin: 2rem 0;
+        }
+        .countdown-title {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .countdown-date {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--gray-700);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Estilos para pantallas grandes */
+        .countdown-box {
+            background: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 110px;
+        }
+        .countdown-box span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Versión móvil */
+        @media (max-width: 480px) {
+            .countdown {
+                flex-wrap: wrap;
+            }
+            .countdown-box {
+                flex: 1 1 70px;
+                padding: 0.1rem;
+            }
+            .countdown-box span {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Filters */
+        .filters {
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background-color: var(--gray-200);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--gray-300);
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Special Event */
+        .special-event {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .special-event::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/trueque.png') repeat center center;
+background-size: cover; /* Ajusta el tamaño para que cubra todo el contenedor */
+            opacity: 0.1;
+        }
+
+        .special-event h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            color: var(--secondary);
+        }
+
+        .special-event p {
+            margin-bottom: 1rem;
+            position: relative;
+            max-width: 80%;
+        }
+
+        .special-event .btn {
+            position: relative;
+        }
+
+        /* Program */
+        .program {
+            margin: 2rem 0;
+        }
+
+        .program h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 0.5rem;
+        }
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .event-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .event-header {
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: var(--gray-100);
+            transition: background-color 0.3s ease;
+        }
+
+        .event-card.active .event-header {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .event-time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .event-time i {
+            color: var(--secondary);
+        }
+
+        .event-card.active .event-time i {
+            color: white;
+        }
+
+        .event-title {
+            flex-grow: 1;
+            font-weight: 600;
+        }
+
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+
+        .event-card.active .event-location {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .event-toggle {
+            background: none;
+            border: none;
+            color: var(--gray-600);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card.active .event-toggle {
+            color: white;
+            transform: rotate(180deg);
+        }
+
+        .event-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .event-card.active .event-content {
+            max-height: 1000px;
+        }
+
+        .event-details {
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .event-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .event-info {
+            flex-grow: 1;
+        }
+
+        .event-description {
+            margin-bottom: 1rem;
+            color: var(--gray-700);
+        }
+
+        .event-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn:not(#backtotop) {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primariOv2 {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primariOv2:hover {
+            background-color: var(--secondary);
+        }
+
+        .btn-secondaryv2 {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-secondaryv2:hover {
+            background-color: var(--secondary);
+        }
+
+        .btn-outline {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #059669;
+        }
+
+        /* modaLidad */
+        .modaLidad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modaLidad-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modaLidad {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .modaLidad-overlay.active .modaLidad {
+            transform: translateY(0);
+        }
+
+        .modaLidad-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modaLidad-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .modaLidad-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-500);
+            transition: color 0.3s ease;
+        }
+
+        .modaLidad-close:hover {
+            color: var(--danger);
+        }
+
+        .modaLidad-body {
+            padding: 1.5rem;
+        }
+
+        .modaLidad-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--gray-800);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--gray-300);
+        }
+
+        .footer-section p {
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--gray-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-700);
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .encabezado {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.5rem 1rem;
+            }
+
+            .logo-container {
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+            }
+
+            .search-container {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .main-contenidO {
+                margin-top:0px;
+		width: 100%;
+            }
+
+            .CarruselDeLasAmericas-container {
+                height: 200px;
+            }
+
+            .event-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .event-location {
+                margin-top: 0.5rem;
+            }
+
+            .event-details {
+                flex-direction: column;
+            }
+
+            .event-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .event-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title h1 {
+                font-size: 1.2rem;
+            }
+
+            .CarruselDeLasAmericas-container {
+                height: 150px;
+            }
+
+            .CarruselDeLasAmericas-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .CarruselDeLasAmericas-prev, .CarruselDeLasAmericas-next {
+                width: 30px;
+                height: 30px;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filter-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s ease forwards;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Toast Notification */
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2000;
+        }
+
+        .toast {
+            background-color: white;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-success {
+            border-left: 4px solid var(--success);
+        }
+
+        .toast-warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .toast-error {
+            border-left: 4px solid var(--danger);
+        }
+
+        .toast-icon {
+            font-size: 1.2rem;
+        }
+
+        .toast-success .toast-icon {
+            color: var(--success);
+        }
+
+        .toast-warning .toast-icon {
+            color: var(--warning);
+        }
+
+        .toast-error .toast-icon {
+            color: var(--danger);
+        }
+
+        .toast-message {
+            flex-grow: 1;
+            font-size: 0.9rem;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: var(--gray-500);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado (ya no se llama header ni usa posición fixed) -->
+    <div class="encabezado">
+        <div class="logo-container">
+            <img src="https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/ITSON_negativo.png" alt="Logo ITSON" class="logo">
+            <div class="header-title">
+                <h1>Jornada por el Día Mundial del Libro y los Derechos de Autor</h1>
+                <p>ITSON 2026</p>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar eventos..." id="search-input">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-contenidO">
+        <!-- CarruselDeLasAmericas -->
+<section class="CarruselDeLasAmericas-container">
+<div class="CarruselDeLasAmericas" id="CarruselDeLasAmericas">
+<div class="CarruselDeLasAmericas-slide"><img src="https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/banner.jpeg" alt="Jornada" class="CarruselDeLasAmericas-image" />
+<div class="CarruselDeLasAmericas-content">
+<h3 style="color: white;">Bienvenidas y bienvenidos al programa de la Jornada</h3>
+</div>
+</div>
+<div class="CarruselDeLasAmericas-slide"><img src="https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/banner-pelicula.png" alt="Letras en el Cine: La Empleada" class="CarruselDeLasAmericas-image" />
+<div class="CarruselDeLasAmericas-content">
+<h3 style="color: white;">Letras en el Cine: La Empleada</h3>
+<p>11:00 AM - Aula Club de Leones</p>
+</div>
+</div>
+</div>
+<button class="CarruselDeLasAmericas-prev" id="CarruselDeLasAmericas-prev"><i class="fas fa-chevron-left"></i></button> <button class="CarruselDeLasAmericas-next" id="CarruselDeLasAmericas-next"><i class="fas fa-chevron-right"></i></button>
+<div class="CarruselDeLasAmericas-nav" id="CarruselDeLasAmericas-nav"></div>
+</section>
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <div class="countdown-title">Cuenta regresiva para el evento</div>
+            <div class="countdown-date">Jueves 23 de abril 2026, 9:00 am (Cd. Obregón, Sonora)</div>
+            <div class="countdown">
+                <div class="countdown-box" id="days-box"><span id="days">0</span>Días</div>
+                <div class="countdown-box" id="hours-box"><span id="hours">0</span>Horas</div>
+                <div class="countdown-box" id="minutes-box"><span id="minutes">0</span>Minutos</div>
+                <div class="countdown-box" id="seconds-box"><span id="seconds">0</span>Segundos</div>
+            </div>
+        </section>
+
+        <!-- Special Event -->
+        <section class="special-event slide-up">
+            <h2><i class="fas fa-book-open"></i> Exposición de Libros Nuevos y Usados</h2>
+            <p>Visita nuestra exposición con venta y trueque de libros en el pasillo estudiantil. ¡Encuentra tu próxima lectura favorita!</p>
+            <p><strong>Horario:</strong> 9:00 AM - 4:00 PM</p>
+            <p><strong>Lugar:</strong> Pasillo estudiantil</p>
+            <button class="btn btn-primariOv2" onclick="showEventDetails('exposicion')">
+                <i class="fas fa-info-circle"></i> Más información
+            </button>
+        </section>
+
+        <!-- Program -->
+        <section class="program">
+            <h2>Programa del Evento</h2>
+            <!-- Filters -->
+            <section class="filters">
+                <span class="filter-label">Filtrar por:</span>
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="panel">Paneles</button>
+                <button class="filter-btn" data-filter="taller">Talleres</button>
+                <button class="filter-btn" data-filter="presentacion">Presentaciones</button>
+                <button class="filter-btn" data-filter="cultural">Cultural</button>
+                <button class="filter-btn" data-filter="conferencia">Conferencias</button>
+            </section>
+
+            <div class="event-list" id="event-list">
+                <!-- Los eventos se cargarán mediante JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Acerca del evento</h3>
+                <p>Celebración del Día Mundial del Libro y los Derechos de Autor en ITSON, con actividades para fomentar la lectura y la cultura.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> cultura@itson.edu.mx</p>
+                <p><i class="fas fa-phone"></i> (644) 410-9000</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1B2bc3SZkv/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/bibliotecaitson?igsh=OG1jbnByOXZrZDN3" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/bibliotecaitson" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ITSON - Instituto Tecnológico de Sonora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- modaLidad -->
+    <div class="modaLidad-overlay" id="modaLidad-overlay">
+        <div class="modaLidad">
+            <div class="modaLidad-header">
+                <h2 class="modaLidad-title" id="modaLidad-title">Detalles del evento</h2>
+                <button class="modaLidad-close" id="modaLidad-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modaLidad-body" id="modaLidad-body">
+                <!-- El contenido del modaLidad se cargará mediante JavaScript -->
+            </div>
+            <div class="modaLidad-footer">
+                <button class="btn btn-outline" id="modaLidad-close-btn">Cerrar</button>
+                <button class="btn btn-primariOv2" id="modaLidad-action-btn">Agendar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container">
+        <!-- Las notificaciones toast se mostrarán aquí mediante JavaScript -->
+    </div>
+
+    <script>
+        // Event Data
+        const events = [
+            {
+                id: 'inauguracion',
+                time: '9:00',
+                duration: '30 min',
+                title: 'Inauguración',
+                location: 'Pasillo estudiantil',
+                description: 'Ceremonia de apertura oficial del Día Mundial del Libro y los Derechos de Autor ITSON 2025.',
+                categories: ['cultural'],
+                image: 'inauguracion.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'exposicion',
+                time: '9:00',
+                duration: '7 h',
+                title: 'Exposición de Libros Nuevos y Usados',
+                location: 'Pasillo estudiantil',
+                description: 'Exposición con venta y trueque de libros. Encuentra tu próxima lectura favorita o intercambia tus libros ya leídos por nuevas aventuras literarias.',
+                categories: ['cultural'],
+                image: 'trueque_2.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'panel-jovenes',
+                time: '9:30',
+                duration: '1 h',
+                title: 'Panel con jóvenes autores',
+                location: 'Pasillo estudiantil',
+                description: 'Jóvenes escritores de diversas edades, tanto estudiantes del ITSON como externos, compartirán sus procesos creativos y su camino en el mundo literario. Participan: Mariana Cienfuegos, María Julia Valenzuela Preciado, Daniela Machado',
+                categories: ['panel'],
+                image: 'jovenes_autores.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'panel-conversatorio',
+                time: '10:30',
+                duration: '1 h',
+                title: 'Panel conversatorio: Lectores estrella',
+                location: 'Pasillo estudiantil',
+                description: 'Destacados lectores que forman parte de nuestra comunidad académica, estudiantes, compartirán sus experiencias personales y recomendaciones literarias. ¡Una charla enriquecedora para descubrir nuevas lecturas!',
+                categories: ['panel'],
+                image: 'lectores_estrella.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'panel-versos',
+                time: '11:30',
+                duration: '30 min',
+                title: 'Versos en vivo',
+                location: 'Pasillo estudiantil',
+                description: '¿Ya escribiste un poema… y estás listo para compartirlo? ✍️✨<br>Esta es tu señal.<br>La Biblioteca ITSON te invita a formar parte de Versos en Vivo, un espacio donde la poesía se comparte, se escucha y cobra vida frente a otros.<br>🎤 Participa leyendo tu propio poema y conecta con más voces creativas en una experiencia auténtica y expresiva.<br>✨ Sé parte de:<br>* Un escenario abierto para tu voz.<br>* Un encuentro con otros autores.<br>* Una experiencia de expresión y creatividad.<br>📌 Requisitos:<br>* Tema libre.<br>* Máximo 1 página.<br>* Registro previo.<br>📅 Fecha límite de registro: 15 de abril del 2026.',
+                categories: ['panel'],
+                image: 'versos.png',
+                hasRegistration: true,
+                limitedCapacity: false
+            },
+            {
+                id: 'presentacion-libros',
+                time: '12:00',
+                duration: '45 min',
+                title: 'Presentación de libros ITSON',
+                location: 'Pasillo estudiantil',
+                description: 'Presentación de las últimas publicaciones de la Oficina de Publicaciones ITSON con la presencia de sus autores. Descubre las últimas publicaciones: 👥 Tejidos organizacionales. Valor, comunidad y transformación social. 🕊️ Construyendo paz, enfrentando violencias. Estudios sobre juventudes. 🎓 Inclusión educativa. Ambientes escolares, agentes participativos y prácticas transformadoras ',
+                categories: ['presentacion'],
+                image: 'presentacion_libros.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'intervencion-musical',
+                time: '12:45',
+                duration: '15 min',
+                title: 'Intervención musical: Acame',
+                location: 'Pasillo estudiantil',
+                description: 'Presentación musical a cargo de Acame con un repertorio especial dedicado a la literatura.',
+                categories: ['cultural'],
+                image: 'intervencion_musical.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'letras-cine',
+                time: '11:00',
+                duration: '2 h',
+                title: 'Letras en el Cine: La Empleada',
+                location: 'Aula Club de Leones',
+                description: 'Proyección de la película La Empleada, basada en la novela de Freida McFadden. ¡Acompáñanos en un análisis literario-cinematográfico y disfruta de palomitas gratis si eres de los primeros en llegar! 🍿<br>BOLETOS DISPONIBLES (HASTA AGOTAR EXISTENCIAS) EN: Biblioteca Náinari y Centro.<br><video width="100%" height="auto" controls playsinline><source src="https://soportebibliotecaitson.github.io/recursos-dia-del-libro/dia-del-libro-2026/trailer.mp4" type="video/mp4">Tu navegador no soporta la reproducción de video.</video>',
+                categories: ['cultural'],
+                image: 'la_empleada.jpeg',
+                hasRegistration: false,
+                limitedCapacity: true
+            },
+            {
+                id: 'taller-biblioteca',
+                time: '9:00',
+                duration: '1 h 30 min',
+                title: 'Taller: Estrategias de estudio potenciadas con Inteligencia artificial.',
+                location: 'Aula de Capacitación Biblioteca Náinari',
+                description: 'Aprende cómo la inteligencia artificial puede apoyar tus con tus estudios en este taller práctico. Cupo limitado. Constancia incluida para participantes.',
+                categories: ['taller'],
+                image: 'taller_ia.jpg',
+                hasRegistration: true,
+                limitedCapacity: true
+            },
+            {
+                id: 'taller-procrastinar',
+                time: '11:00',
+                duration: '1 h 30 min',
+                title: 'Taller: Cómo evitar la procrastinación en la universidad: organización para el éxito académico.',
+                location: 'Aula de Capacitación Biblioteca Náinari',
+                description: 'Aprende métodos efectivos para evitar la procrastinación y así mejorar tu desempeño académico. Constancia incluida.',
+                categories: ['taller'],
+                image: 'taller_procrastinacion.jpg',
+                hasRegistration: true,
+                limitedCapacity: true
+            },
+            {
+                id: 'picnic-literario',
+                time: '14:00',
+                duration: '2 h',
+                title: 'Picnic Literario',
+                location: 'Jardín atrás de Biblioteca Náinari',
+                description: 'Relájate en el jardín atrás de la Biblioteca Náinari, comparte lecturas y disfruta de bebidas refrescantes. ¡Trae tu libro favorito o elige uno de nuestra selección!',
+                categories: ['cultural'],
+                image: 'picnic.jpg',
+                hasRegistration: false,
+                limitedCapacity: false
+            },
+            {
+                id: 'taller-cuento',
+                time: '14:00',
+                duration: '2 h',
+                title: 'Taller: Microcuento',
+                location: 'Aula audiovisual AV0914',
+                description: '¿Puedes contar una historia en solo unas líneas? 👀📖<br>Descubre el poder de lo breve en nuestro Taller de Microcuento, un espacio donde cada palabra cuenta y cada silencio también dice algo.<br>✍️ Aquí vas a aprender a:<br>• Crear historias impactantes con pocas palabras<br>• Construir atmósferas y sugerir mundos<br>• Lograr finales que sorprenden<br>🧠 A través de ejercicios prácticos y lecturas breves, desarrollarás tu capacidad de síntesis y creatividad.<br>✨ No necesitas experiencia previa, solo ganas de escribir.<br>🌙 Un taller para descubrir que, a veces, una historia cabe en un instante.<br>📍   Aula Audiovisual AV0924.<br>⌚ De 14:00 a 16:00.',
+                categories: ['taller'],
+                image: 'taller_cuento.jpg',
+                hasRegistration: true,
+                limitedCapacity: true
+            },
+            {
+                id: 'taller-poesia',
+                time: '14:00',
+                duration: '2 h',
+                title: 'Taller: Poseía',
+                location: 'Aula audiovisual AV0924',
+                description: '¿Y si hoy empiezas a escribir lo que siempre has sentido? ✍️✨<br> Si te llama la escritura, la poesía o simplemente quieres explorar tu creatividad, este espacio es para ti.<br>Te invitamos a un **Taller de Poesía (sesión única de 2 horas)** donde la palabra se convierte en experiencia: se escucha, se prueba, se transforma.<br>🖋️ Durante el taller:<br>• Explorarás la escritura a través de ejercicios guiados<br>• Leerás y conectarás con textos breves<br>• Descubrirás tu propia voz poética<br>No necesitas experiencia, solo curiosidad y ganas de expresarte.<br>🌿 Un momento para pausar, observar y convertir lo cotidiano en lenguaje.<br>📍 Cupo limitado<br>📩 Informes por mensaje<br>Atrévete a escribirte.',
+                categories: ['cultural'],
+                image: 'taller_poesia.jpg',
+                hasRegistration: true,
+                limitedCapacity: false
+            },
+            {
+                id: 'conferencia-virtual',
+                time: '15:00',
+                duration: '1 h',
+                title: 'Conferencia Virtual: Lectura, IA y tecnologías que nos transforman',
+                location: 'Virtual - Vía Zoom',
+                description: '<b>Descubre el poder de la IA</b>.<br><br>Únete a la Dra. <b><mark>Marisol Flores Garrido</mark></b>. Marisol Marisol Flores estudió matemáticas aplicadas en la Universidad Autónoma de Coahuila. Posteriormente obtuvo una maestría en cómputo científico en la Universidad de British Columbia (BC, Canadá) y un doctorado en ciencias computacionales en el Instituto Nacional de Astrofísica, Óptica y Electrónica (Puebla, México). Sus intereses de investigación se centran en el aprendizaje automático, el análisis de redes y la intersección entre la inteligencia artificial y las humanidades.<br><br>Esta es una conferencia <b>virtual</b> diseñada para estudiantes, académicos, administrativos y comunidad en general. Al inscribirte, se te enviará el link de acceso para que puedas participar desde cualquier lugar.<br><br><mark><a href="https://forms.gle/UxtqbDaYG5pHHUqb6" target="_blank">Recuerda inscribirte en este link</a></mark>',
+                categories: ['conferencia'],
+                image: 'marisol.jpg',
+                hasRegistration: true,
+                limitedCapacity: false
+            },
+        ];
+
+        // DOM Elements
+        const eventList = document.getElementById('event-list');
+        const modaLidadOverlay = document.getElementById('modaLidad-overlay');
+        const modaLidadTitle = document.getElementById('modaLidad-title');
+        const modaLidadBody = document.getElementById('modaLidad-body');
+        const modaLidadClose = document.getElementById('modaLidad-close');
+        const modaLidadCloseBtn = document.getElementById('modaLidad-close-btn');
+        const modaLidadActionBtn = document.getElementById('modaLidad-action-btn');
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toastContainer = document.getElementById('toast-container');
+        const CarruselDeLasAmericas = document.getElementById('CarruselDeLasAmericas');
+        const CarruselDeLasAmericasPrev = document.getElementById('CarruselDeLasAmericas-prev');
+        const CarruselDeLasAmericasNext = document.getElementById('CarruselDeLasAmericas-next');
+        const CarruselDeLasAmericasNav = document.getElementById('CarruselDeLasAmericas-nav');
+
+        // Current filter
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderEvents();
+            setupCarruselDeLasAmericas();
+            setupEncabezado();
+            updateCountdown();
+        });
+
+        // Setup efecto de scroll en el encabezado (si se desea conservar cambios en el padding)
+        function setupEncabezado() {
+            window.addEventListener('scroll', () => {
+                const encabezado = document.querySelector('.encabezado');
+                if (window.scrollY > 50) {
+                    encabezado.classList.add('scrolled');
+                } else {
+                    encabezado.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Setup CarruselDeLasAmericas
+        function setupCarruselDeLasAmericas() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.CarruselDeLasAmericas-slide');
+            
+            // Crear los puntos de navegación
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('CarruselDeLasAmericas-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                CarruselDeLasAmericasNav.appendChild(dot);
+            });
+
+            // Configurar la navegación
+            CarruselDeLasAmericasPrev.addEventListener('click', prevSlide);
+            CarruselDeLasAmericasNext.addEventListener('click', nextSlide);
+
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+
+            // Reiniciar el intervalo en la navegación manual
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function goToSlide(index) {
+                currentSlide = index;
+                updateCarruselDeLasAmericas();
+                resetInterval();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateCarruselDeLasAmericas();
+                resetInterval();
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateCarruselDeLasAmericas();
+                resetInterval();
+            }
+
+            function updateCarruselDeLasAmericas() {
+                CarruselDeLasAmericas.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Actualizar los puntos de navegación
+                document.querySelectorAll('.CarruselDeLasAmericas-dot').forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        // Render events based on current filter and search
+        function renderEvents() {
+            eventList.innerHTML = '';
+            
+            const filteredEvents = events.filter(event => {
+                const matchesFilter = currentFilter === 'all' || event.categories.includes(currentFilter);
+                const matchesSearch = event.title.toLowerCase().includes(currentSearch.toLowerCase()) || 
+                                     event.description.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                                     event.location.toLowerCase().includes(currentSearch.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filteredEvents.length === 0) {
+                eventList.innerHTML = `
+                    <div class="no-events">
+                        <p>No se encontraron eventos que coincidan con tu búsqueda.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Ordenar los eventos por horario
+            filteredEvents.sort((a, b) => {
+                const timeA = parseInt(a.time.split(':')[0]) * 60 + parseInt(a.time.split(':')[1] || 0);
+                const timeB = parseInt(b.time.split(':')[0]) * 60 + parseInt(b.time.split(':')[1] || 0);
+                return timeA - timeB;
+            });
+
+            filteredEvents.forEach(event => {
+                const eventCard = document.createElement('div');
+                eventCard.classList.add('event-card');
+                eventCard.dataset.id = event.id;
+                
+                eventCard.innerHTML = `
+                    <div class="event-header">
+                        <div class="event-time">
+                            <i class="far fa-clock"></i>
+                            ${event.time}
+                        </div>
+                        <div class="event-title"><strong>${event.title}</strong></div>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${event.location}
+                        </div>
+                        <button class="event-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-details">
+                            <img src="${event.image}" alt="${event.title}" class="event-image">
+                            <div class="event-info">
+				        <!-- Bloque nuevo con duración y lugar -->
+        <div class="event-extra-info">
+            <p><i class="fa-solid fa-hourglass-end"></i> <strong>Duración:</strong> ${event.duration}</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> ${event.location}</p>
+        </div>
+                                <p class="event-description"><i class="fa-solid fa-circle-info"></i> <strong>Descripción:</strong> ${event.description}</p>
+                                <div>
+                                    ${event.categories.map(category => `
+                                        <span class="event-category">${getCategoryName(category)}</span>
+                                    `).join('')}
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn btn-primariOv2" onclick="showEventDetails('${event.id}')">
+                                        <i class="fas fa-info-circle"></i> Detalles
+                                    </button>
+                                    <button class="btn btn-secondaryv2" onclick="shareEvent('${event.id}')">
+                                        <i class="fas fa-share-alt"></i> Compartir
+                                    </button>
+                                    <button class="btn btn-outline" onclick="addToCalendar('${event.id}')">
+                                        <i class="far fa-calendar-plus"></i> Agendar
+                                    </button>
+                                    <button class="btn btn-outline" onclick="setReminder('${event.id}')">
+                                        <i class="far fa-bell"></i> Recordatorio
+                                    </button>
+                                    ${event.hasRegistration ? `
+                                        <button class="btn btn-success" onclick="registerForEvent('${event.id}')">
+                                            <i class="fas fa-user-plus"></i> Inscribirse
+                                        </button>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                eventList.appendChild(eventCard);
+                
+                // Agregar evento para alternar contenido
+                const header = eventCard.querySelector('.event-header');
+                header.addEventListener('click', () => {
+                    eventCard.classList.toggle('active');
+                });
+            });
+        }
+
+        // Get category display name
+        function getCategoryName(category) {
+            const categories = {
+                'panel': 'Panel',
+                'taller': 'Taller',
+                'presentacion': 'Presentación',
+                'cultural': 'Cultural',
+                'conferencia': 'Conferencia'
+            };
+            return categories[category] || category;
+        }
+
+        // Show event details in modaLidad
+        function showEventDetails(eventId) {
+            const event = events.find(e => e.id === eventId);
+            if (!event) return;
+            
+            modaLidadTitle.textContent = event.title;
+            
+            modaLidadBody.innerHTML = `
+                <div class="modaLidad-event-details">
+                    <img src="${event.image}" alt="${event.title}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem;">
+                    
+                    <div class="modaLidad-event-info" style="margin-bottom: 1rem;">
+                        <p><strong><i class="far fa-clock"></i> Horario:</strong> ${event.time} (${event.duration})</p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Lugar:</strong> ${event.location}</p>
+                        ${event.limitedCapacity ? '<p><strong><i class="fas fa-users"></i> Cupo:</strong> Limitado</p>' : ''}
+                    </div>
+                    
+                    <div class="modaLidad-event-description" style="margin-bottom: 1rem;">
+                        <h3>Descripción</h3>
+                        <p>${event.description}</p>
+                    </div>
+                    
+                    <div class="modaLidad-event-categories" style="margin-bottom: 1rem;">
+                        <h3>Categorías</h3>
+                        <div>
+                            ${event.categories.map(category => `
+                                <span class="event-category">${getCategoryName(category)}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modaLidadActionBtn.textContent = event.hasRegistration ? 'Inscribirse' : 'Agendar';
+            modaLidadActionBtn.onclick = event.hasRegistration 
+                ? () => registerForEvent(eventId) 
+                : () => addToCalendar(eventId);
+            
+            modaLidadOverlay.classList.add('active');
+        }
+
+        // Close modaLidad
+        modaLidadClose.addEventListener('click', () => {
+            modaLidadOverlay.classList.remove('active');
+        });
+
+        modaLidadCloseBtn.addEventListener('click', () => {
+            modaLidadOverlay.classList.remove('active');
+        });
+
+        modaLidadOverlay.addEventListener('click', (e) => {
+            if (e.target === modaLidadOverlay) {
+                modaLidadOverlay.classList.remove('active');
+            }
+        });
+
+        // Share event
+        function shareEvent(eventId) {
+            const event = events.find(e => e.id === eventId);
+            if (!event) return;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `ITSON 2025: ${event.title}`,
+                    text: `Te invito al evento "${event.title}" del Día Mundial del Libro ITSON 2025. ${event.time} en ${event.location}`,
+                    url: window.location.href + '#' + event.id
+                })
+                .then(() => showToast('¡Evento compartido con éxito!', 'success'))
+                .catch(error => console.log('Error sharing', error));
+            } else {
+                const dummyInput = document.createElement('input');
+                const shareUrl = window.location.href + '#' + event.id;
+                document.body.appendChild(dummyInput);
+                dummyInput.value = shareUrl;
+                dummyInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummyInput);
+                showToast('Enlace copiado al portapapeles', 'success');
+            }
+        }
+
+
+// Función auxiliar para calcular la duración en minutos
+function parseDuration(duration) {
+  let durationMinutes = 0;
+  
+  if (duration.includes('h') && duration.includes('min')) {
+    // Formato "X h Y min"
+    const parts = duration.split(' ');
+    const hours = parseInt(parts[0]);
+    const minutes = parseInt(parts[2]);
+    durationMinutes = (hours * 60) + minutes;
+  } else if (duration.includes('h')) {
+    // Formato "X h"
+    const hours = parseInt(duration);
+    durationMinutes = hours * 60;
+  } else if (duration.includes('min')) {
+    // Formato "Y min"
+    const minutes = parseInt(duration);
+    durationMinutes = minutes;
+  } else {
+    // Formato numérico directo
+    durationMinutes = parseInt(duration);
+  }
+  
+  return durationMinutes;
+}
+
+// Función principal para agendar eventos
+function addToCalendar(eventId) {
+  const event = events.find(e => e.id === eventId);
+  if (!event) return;
+
+  // Detectar dispositivo móvil
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  // Extraer horas y minutos del inicio
+  const [hours, minutes] = event.time.split(':').map(Number);
+  
+  // Calcular duración en minutos
+  const durationMinutes = parseDuration(event.duration);
+  
+  // Crear fecha base para el evento (8 de abril de 2025)
+  // Nota: Mes en JavaScript es 0-indexado, por lo que abril es 3
+  const startDate = new Date(2025, 3, 8, hours, minutes);
+  const endDate = new Date(startDate.getTime() + durationMinutes * 60000);
+  
+  // Formatear fechas para Google Calendar y .ics
+  // Formato: YYYYMMDDTHHMMSS
+  const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    return `${year}${month}${day}T${hours}${minutes}00`;
+  };
+  
+  const startFormatted = formatDate(startDate);
+  const endFormatted = formatDate(endDate);
+  
+  if (isMobile) {
+    // Crear evento .ics para dispositivos móviles
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//ITSON//Dia Mundial del Libro 2025//ES',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VTIMEZONE',
+      'TZID:America/Hermosillo',
+      'TZURL:http://tzurl.org/zoneinfo-outlook/America/Hermosillo',
+      'X-LIC-LOCATION:America/Hermosillo',
+      'BEGIN:STANDARD',
+      'TZOFFSETFROM:-0700',
+      'TZOFFSETTO:-0700',
+      'TZNAME:MST',
+      'DTSTART:19700101T000000',
+      'END:STANDARD',
+      'END:VTIMEZONE',
+      'BEGIN:VEVENT',
+      `UID:${event.id}@itson.mx`,
+      `DTSTAMP:${startFormatted}`,
+      `DTSTART;TZID=America/Hermosillo:${startFormatted}`,
+      `DTEND;TZID=America/Hermosillo:${endFormatted}`,
+      `SUMMARY:${event.title}`,
+      `DESCRIPTION:${event.description.replace(/<[^>]*>?/gm, '').replace(/\n/g, '\\n')}`,
+      `LOCATION:${event.location}`,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `evento-${event.id}.ics`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
+    // Redirección a Google Calendar para escritorio
+    // Formato: YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS
+    const dates = `${startFormatted}/${endFormatted}`;
+    
+    // Limpiar la descripción de HTML para Google Calendar
+    const cleanDescription = event.description.replace(/<[^>]*>?/gm, '');
+    
+    const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${dates}&details=${encodeURIComponent(cleanDescription)}&location=${encodeURIComponent(event.location)}&ctz=America/Hermosillo`;
+    
+    window.open(calendarUrl, '_blank');
+  }
+
+  showToast('Evento añadido al calendario', 'success');
+}
+        // Set reminder
+        function setReminder(eventId) {
+            const event = events.find(e => e.id === eventId);
+            if (!event) return;
+            
+            if ('Notification' in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        showToast(`Recordatorio configurado para "${event.title}"`, 'success');
+                        setTimeout(() => {
+                            new Notification(`Recordatorio: ${event.title}`, {
+                                body: `El evento comienza a las ${event.time} en ${event.location}`,
+                                icon: '/placeholder.svg?height=64&width=64'
+                            });
+                        }, 10000);
+                    }
+                });
+            } else {
+                showToast('Tu navegador no soporta notificaciones', 'warning');
+            }
+        }
+
+        // Register for event
+function registerForEvent(eventId) {
+  if(eventId == "panel-versos"){
+    window.open("https://forms.gle/iCJuvdBcqQWEZ3ZN7", "_blank");
+  }
+  else{
+    window.open("https://forms.gle/UxtqbDaYG5pHHUqb6", "_blank");
+  }
+  modaLidadOverlay.classList.remove('active');
+}
+
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.classList.add('toast', `toast-${type}`);
+            
+            let icon = 'info-circle';
+            if (type === 'success') icon = 'check-circle';
+            if (type === 'warning') icon = 'exclamation-triangle';
+            if (type === 'error') icon = 'times-circle';
+            
+            toast.innerHTML = `
+                <div class="toast-icon"><i class="fas fa-${icon}"></i></div>
+                <div class="toast-message">${message}</div>
+                <button class="toast-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            toastContainer.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+            
+            const timeout = setTimeout(() => {
+                closeToast(toast);
+            }, 5000);
+            
+            const closeBtn = toast.querySelector('.toast-close');
+            closeBtn.addEventListener('click', () => {
+                clearTimeout(timeout);
+                closeToast(toast);
+            });
+        }
+
+        // Close toast
+        function closeToast(toast) {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }
+
+        // Search events
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderEvents();
+        });
+
+        // Filter events
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderEvents();
+            });
+        });
+
+        // Countdown Functionality
+        function updateCountdown() {
+            const now = new Date();
+            const eventTime = new Date("2026-04-23T07:00:00-09:00");
+            const diff = eventTime - now;
+            if(diff < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                return;
+            }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
